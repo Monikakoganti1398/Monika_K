@@ -1,3 +1,47 @@
-<footer>
-    © Created by Monika Koganti
-</footer>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Management</title>
+    <style>
+        /* Add your existing styles here */
+
+        body {
+            margin: 0;
+            padding: 0;
+            /* This ensures there's no scroll just for the footer */
+            min-height: 100vh;
+            /* Use flexbox to push the footer to the bottom */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content {
+            flex: 1;
+            /* Your content styles here */
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: auto;
+            /* Pushes the footer to the bottom */
+            width: 100%;
+            /* Full width */
+            padding: 10px;
+            font-size: 0.8em;
+            box-shadow: 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="footer">
+        ©Created by Monika Koganti
+    </div>
+
+</body>
+
+</html>

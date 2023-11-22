@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Delete</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f4f4f4;
+        }
+
+        .modal {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .modal h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .delete-button {
+            background-color: red;
+            color: white;
+        }
+
+        .cancel-button {
+            background-color: grey;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="model">
+        <h2>Confirm Delete</h2>
+        <p>Are you sure you want to delete contact "bob"?</p>
+        <button class="button delete-button" onclick="confirmDelete()">Delete</button>
+        <button class="button cancel-button" onclick="cancelDelete()">Cancel</button>
+    </div>
+
+    <script>
+        function confirmDelete() {
+            // Add logic to delete the contact from the backend
+            console.log("Contact deleted.");
+            // Redirect or update the UI accordingly
+        }
+
+        function cancelDelete() {
+            // Logic to handle cancellation
+            console.log("Delete cancelled.");
+            // Typically, close the dialog or redirect the user
+        }
+    </script>
+
+</body>
+
+</html>

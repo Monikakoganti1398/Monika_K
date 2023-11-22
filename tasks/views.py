@@ -7,7 +7,7 @@ def index(request):
     print(data)
     context={"data":data}
     return render(request,"index.html",context)
-def createContact(request):
+def create(request):
     data=Student.objects.all()
     print(data)
     context={"data":data}
