@@ -54,11 +54,10 @@
 
     <div class="model">
         <h2>Confirm Delete</h2>
-        <p>Are you sure you want to delete contact "bob"?</p>
-        <button class="button delete-button" onclick="confirmDelete()">Delete</button>
+        <p>Are you sure you want to delete contact?</p>
+        <button class="button delete-button" href="/delete/{{data.id}}">Delete</button>
         <button class="button cancel-button" onclick="cancelDelete()">Cancel</button>
     </div>
-
     <script>
         function confirmDelete() {
             // Add logic to delete the contact from the backend
@@ -72,7 +71,6 @@
             // Typically, close the dialog or redirect the user
         }
     </script>
-
 </body>
 
 </html>

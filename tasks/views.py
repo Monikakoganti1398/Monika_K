@@ -4,12 +4,12 @@ from .models import Student
 # Create your views here.
 def index(request):
     data=Student.objects.all()
-    print(data)
+    #print(data)
     context={"data":data}
     return render(request,"index.html",context)
 def create(request):
     data=Student.objects.all()
-    print(data)
+   # print(data)
     context={"data":data}
     return render(request,"create.html",context)
 
@@ -28,27 +28,29 @@ def insertData(request):
     return render(request,"index.html")
 
 def updateData(request,id):
-
     if request.method=="POST":
         name=request.POST.get('name')
         email=request.POST.get('email')
         age=request.POST.get('age')
         gender=request.POST.get('gender')
-
         edit=Student.objects.get(id=id)
         edit.name=name
         edit.email=email
         edit.gender=gender
         edit.age=age
         edit.save()
-
         return redirect("/")
-
     d=Student.objects.get(id=id)
     context={"d":d}
     return render(request,"edit.html",context)
 
-def deleteData(request,id):
-    data=Student.objects.get(id=id)
-    data.delete()
-    return redirect("/")
+from django.shortcuts import render, redirect, get_object_or_404
+def deleteData(request, id):
+    data = get_object_or_404(Student, id=id)
+    if request.method == 'POST':
+        print(id)
+        # When the form is submitted, delete the data and redirect
+        data.delete()
+        return redirect('/')
+        # Render the confirmation page before deleting
+    return render(request, 'delete.html', {'data': data})
