@@ -7,6 +7,6 @@ urlpatterns = [
     path('insert',views.insertData,name="insertData"),
     path('create',views.create,name="create"),
     path('update/<id>',views.updateData,name="updateData"),
-    path('delete/<id>',views.deleteData,name="deleteData"),
-    path('confirmdelete/<id>',views.confirmdelete,name="confirmdelete"),
+
+    path('deleteData/<id>',views.deleteData,name="confirmdelete"),
 ]

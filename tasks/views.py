@@ -45,19 +45,15 @@ def updateData(request,id):
     return render(request,"edit.html",context)
 
 from django.shortcuts import render, redirect, get_object_or_404
+
 def deleteData(request, id):
     data = get_object_or_404(Student, id=id)
-
-        # When the form is submitted, delete the data and redirect
-    data.delete()
-    return redirect('/')
-        # Render the confirmation page before deleting
-def confirmdelete(request, id):
-    data = get_object_or_404(Student, id=id)
+    print("im hereeeeeeeeeee")
     if request.method == 'POST':
-        print("id")
+
+        print("im hereeeeeeeeeee insideeee")
         data.delete()
         return redirect('/')
-    else:
+    
         # Render the confirmation page before deleting
-        return render(request, 'delete.html', {'data': data})
+    return render(request, 'delete.html', {'data': data})
